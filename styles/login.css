@@ -1,0 +1,188 @@
+/* Comentário css de exemplo */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.inside-main-left {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inside-main-left-div h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inside-main-left-div p {
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.inside-main-left-div img {
+    width: 500px;
+}
+
+.inside-main-right {
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    border-radius: 25px 0px 0px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: #fff;
+    width: 400px;
+    height: 480px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.form-texts {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-texts h2 {
+    font-weight: lighter;
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-texts p {
+    font-size: 32px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form input[type="text"], input[type="password"] {
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+    border: 0.5px solid #ccc;
+}
+
+.div-label-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.div-label-input label {
+    color: #444;
+}
+
+.login-button {
+    width: 300px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #00E394;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.form-links {
+    width: 300px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    transition: 300ms;
+}
+
+.form-links a:hover {
+    color: #999;
+}
+
+label {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+    .inside-main-left-div img {
+        width: 300px;
+    }
+    
+    .inside-main-right {
+        background: none;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .inside-main-left {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    .inside-main-right {
+        width: 100%;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .inside-main-right-div {
+        width: 100%;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

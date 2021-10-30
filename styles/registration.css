@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+label {
+    font-size: 14px;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.inside-main-left {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inside-main-left-div h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inside-main-left-div p {
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.inside-main-left-div img {
+    width: 500px;
+}
+
+.inside-main-right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: #fff;
+    width: 600px;
+    height: 510px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.form-texts {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-texts h2 {
+    font-weight: lighter;
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-texts p {
+    font-size: 32px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"] {
+    width: 245px;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+    border: 0.5px solid #ccc;
+    margin-right: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.div-label-input {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.div-label-input label {
+    color: #444;
+}
+
+.registration-button {
+    width: 500px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #00E394;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .inside-main-left {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        height: auto;
+    }
+
+    .inside-main-left-div img {
+        width: 300px;
+    }
+    
+    .inside-main-right {
+        height: auto;
+        background: none;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width: 690px) {
+    .inside-main-right {
+        width: 100%;
+    }
+
+    .inside-main-right-div {
+        width: 90%;
+    }
+    
+    form {
+        height: auto;
+        width: 100%;
+        background-color: none;
+        box-shadow: none;
+        margin-right: 0;
+    }
+
+    .form-texts h2 {
+        margin-top: 40px;
+    }
+
+    .registration-button {
+        margin-bottom: 40px;
+    }
+
+    .div-label-input {
+        flex-direction: column;
+        margin-bottom: 0;
+        width: inherit;
+    }
+
+    .div-label-input div {
+        flex-direction: column;
+    }
+
+    .div-label-input-responsive{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"] {
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .registration-button {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+}
