@@ -32,5 +32,4 @@ if($row == 1) {
     header('Location: ../views/login.php');
     exit();
 }
-
 ?>

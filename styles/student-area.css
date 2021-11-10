@@ -26,7 +26,6 @@ header {
     width: 100%;
     height: 100px;
     background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
-
 }
 
 .inside-header {
@@ -95,7 +94,6 @@ header {
     width: 30px;
     border-radius: 50%;
 }
-
 
 .quit-button {
     font-weight: 300;
@@ -238,7 +236,7 @@ header {
 
 .course-card {
     background-color: #fff;
-    width: 234px;
+    width: 233px;
     height: auto;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
     transition: 200ms;
@@ -279,6 +277,11 @@ header {
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.inside-pagination {
+    color: #000;
 }
 
 .report {
@@ -342,7 +345,9 @@ footer {
     width: 40%;
 }
 
-.inside-footer-div2, .inside-footer-div3, .inside-footer-div4 {
+.inside-footer-div2,
+.inside-footer-div3,
+.inside-footer-div4 {
     width: 20%;
 }
 
@@ -424,6 +429,3 @@ footer {
 .unifeob-logo {
     width: 100px;
 }
-
-
-

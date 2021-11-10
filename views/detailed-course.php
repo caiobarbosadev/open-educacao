@@ -1,5 +1,6 @@
 <?php
 include('../models/checks_login.php');
+include_once("../controllers/select_one_video.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,7 +22,7 @@ include('../models/checks_login.php');
         <section class="inside-header">
             <h2>Open UNIFEOB</h2>
             <div class="inside-header-menu">
-                <a class="item-menu-space" href="#">Cursos</a>
+                <a class="item-menu-space" href="javascript:history.back()">Cursos</a>
                 <a class="item-menu-space" href="#">Categorias</a>
                 <a class="item-menu-space" href="#">Enviar</a>
                 <a href="#">Reportar</a>
@@ -38,24 +39,34 @@ include('../models/checks_login.php');
     <main class="course">
         <section class="inside-course">
             <div class="inside-course-left">
-                <img src="../images/js-course.png" alt="">
+                <?php
+                if($row == 1){
+                    $Video_dados = mysqli_fetch_assoc($retorno);
+                    if($Video_dados["id"] == $_GET["id"]){
+                    echo('<img style=" object-fit: cover; " src="http://img.youtube.com/vi/'.$Video_dados["link"].'/maxresdefault.jpg" alt="">');
+                ?>   
                 <input class="registration-button" type="submit" value="Matricular">
             </div>
             <div class="inside-course-right">
                 <div class="inside-course-right-top">
                     <div class="inside-course-right-top-content">
                         <h2><strong>Curso:</strong>
-                            <?php include_once("../controllers/show_video.php");
-                                echo($teste["titulo"]);
+                            <?php
+                            echo ($Video_dados["titulo"]);
                             ?>
                         </h2>
                         <p><strong>Detalhes</strong></p>
                         <p style="margin-bottom: 20px;">
-                            <?php echo($teste["detalhes"]); ?>
+                            <?php 
+                                echo($Video_dados['conteudos']);
+                            ?>
                         </p>
                         <p><strong>O que você vai aprender?</strong></p>
                         <p style="margin-bottom: 20px;">
-                            <?php echo($teste["conteudos"]); ?>  
+                            <?php echo($Video_dados['detalhes']);
+                                }
+                             }
+                            ?>  
                         </p>
                         <p><strong>Aulas:</strong> 3</p>
                         <p>Manipulando os arquivos HTML e CSS da página</p>

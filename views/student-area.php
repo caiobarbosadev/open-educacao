@@ -20,9 +20,9 @@ include('../models/checks_login.php');
             <section class="inside-header">
                 <h2>Open UNIFEOB</h2>
                 <div class="inside-header-menu">
-                    <a class="item-menu-space" href="#">Cursos</a>
-                    <a class="item-menu-space" href="#">Categorias</a>
-                    <a class="item-menu-space" href="#">Enviar</a>
+                    <a class="item-menu-space" href="#cards">Cursos</a>
+                    <a class="item-menu-space" href="#categories">Categorias</a>
+                    <a class="item-menu-space" href="../views/send-course.php">Enviar</a>
                     <a href="#">Reportar</a>
                 </div>
                 <div class="inside-header-profile-quit">
@@ -77,12 +77,17 @@ include('../models/checks_login.php');
             <section class="inside-hello-student">
                 <h2>Olá, <?php echo $_SESSION['primeironome']?>!</h2>
                 <p>Você está matriculado em 4 cursos.</p>
-                <input class="inside-hello-student-input" type="text" placeholder="Pesquisar cursos...">
+
+                <form action="../controllers/search_course.php" method="get">
+                <input class="inside-hello-student-input" name="name_course" type="text" placeholder="Pesquisar cursos...">
+                <button style="width:50px; height:40px;" type="submit">Buscar</button>
+                </form>
+
             </section>
         </main>
 
         <main class="available-courses">
-            <section class="inside-available-courses">
+            <section id="cards" class="inside-available-courses">
                 <h2>Cursos disponíveis</h2>
                 <select name="categories" id="categories" selec>
                 <option style="color: #ccc;" value="selecione">Selecione uma categoria:</option>
@@ -91,23 +96,12 @@ include('../models/checks_login.php');
                 <option value="enfermagem">Enfermagem</option>
                 <option value="tecnologia">Tecnologia</option>
             </select>
-                <section style="margin-bottom: 30px;" class="inside-available-courses-card">
+                <section  style="margin-bottom: 30px;" class="inside-available-courses-card">
                 <!-- PHP trazendo card com quantidade limite por página -->
                     <?php 
-                    include_once("../controllers/show_card.php");
+                    include_once("../controllers/select_card.php");
                     ?>
                 </section>
-                <div>
-                <?php 
-                if($pc>1){
-                    echo('<a href="../views/student-area.php?pagina='.$anterior.'"><- Anterior</a>');
-                }
-                // echo("|");
-                if($pc<10){
-                    echo('<a href="../views/student-area.php?pagina='.$proximo.'">Proxima -></a>');
-                }
-                ?>
-                </div>
             </section>
         </main>
 

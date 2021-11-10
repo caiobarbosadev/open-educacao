@@ -96,7 +96,6 @@ header {
     border-radius: 50%;
 }
 
-
 .quit-button {
     font-weight: 300;
     color: #fff;
@@ -198,7 +197,9 @@ footer {
     width: 40%;
 }
 
-.inside-footer-div2, .inside-footer-div3, .inside-footer-div4 {
+.inside-footer-div2,
+.inside-footer-div3,
+.inside-footer-div4 {
     width: 20%;
 }
 
