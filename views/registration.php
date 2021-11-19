@@ -48,26 +48,14 @@
                         </div>
                     </div>
                     <div class="div-label-input">
-                        <div class="div-label-input-responsive">
-                            <label for="phone">Telefone:</label>
-                            <input type="number" name="phone" id="phone">
-                        </div>
-                        <div class="div-label-input-responsive">
-                            <label for="birth-date">Data de nascimento:</label>
-                            <input type="date" name="birth-date" id="birth-date">
-                        </div>
-                    </div>
-                    <div class="div-label-input">
-                        <div class="div-label-input-responsive">
-                            <label for="user">Usuário:</label>
-                            <input type="text" name="birth-date" id="birth-date">
-                        </div>
-                        <div class="div-label-input-responsive">
+                        <div class="div-label-input-responsive" style="display: flex; flex-direction: column;">
                             <label for="password">Senha:</label>
                             <input type="password" name="password" id="password">
+                            
                         </div>
+                        <button style="margin-top: 20px;" class="registration-button" type="submit" >Cadastrar</button>
                     </div>
-                    <button class="registration-button" type="submit" >Cadastrar</button>
+                    
                     
                 </form>
             </div>

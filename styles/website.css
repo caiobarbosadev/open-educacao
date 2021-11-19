@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 42px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #fff;
@@ -22,7 +22,7 @@ a {
 .initial {
     width: 100%;
     height: 700px;
-    background-image: url(/images/background-main.svg);
+    background-image: url(../images/background-main.svg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 100px;
@@ -49,7 +49,7 @@ header nav {
     width: 550px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between ;
+    justify-content: space-around ;
 }
 
 header nav a {

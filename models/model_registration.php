@@ -12,7 +12,7 @@
     $password = mysqli_real_escape_string($conn, trim(md5($_POST["password"]))); 
 
     //Instrução SQL para inserir na tabela usuários
-    $queryUser = "INSERT INTO usuario(primeironome, sobrenome, email, ra, senha) VALUES ('$firstName', '$surname', '$email', '$ra', '$password')";
+    $queryUser = "INSERT INTO usuario(primeironome, sobrenome, email, ra, senha, idCargo) VALUES ('$firstName', '$surname', '$email', '$ra', '$password', 3)";
 
 
     //Verificar se a query foi executada

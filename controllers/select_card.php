@@ -3,7 +3,7 @@
 // incluindo conexão do banco
 include_once("../models/connection.php");
     
-    $SelectVideo = "SELECT * from video";
+    $SelectVideo = "SELECT * from video WHERE disponivel = 1";
     
     $limite = mysqli_query($conn, $SelectVideo);
    
@@ -12,10 +12,11 @@ include_once("../models/connection.php");
         echo('  
                 <a href="./detailed-course.php?id='.$dados['id'].'">
                 <div class="course-card">
-                <img src="../images/js-course.png">
+                <img style=" object-fit: cover; " src="http://img.youtube.com/vi/'.$dados["link"].'/maxresdefault.jpg" alt="">
                 <div class="course-card-padding">
                     <p 
-                    style=" overflow: hidden;
+                    style="font-size: 14px;
+                    overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
                     -webkit-line-clamp: 1;
@@ -25,8 +26,9 @@ include_once("../models/connection.php");
                     style=" overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
-                    -webkit-line-clamp: 2;
+                    -webkit-line-clamp: 1;
                     -webkit-box-orient: vertical;
+                    font-size: 12px;
                     " class="text-course-card">'.$dados['detalhes'].'</p>
                     
                 </div>
@@ -34,5 +36,6 @@ include_once("../models/connection.php");
                 </a>');
     }
 
-
+    
+                
 ?>

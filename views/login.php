@@ -33,7 +33,7 @@ session_start();
                         <p>Open UNIFEOB</p>
                     </div>
                     <div class="div-label-input">
-                        <label for="user">Usuário:</label>
+                        <label for="user">RA:</label>
                         <input type="text" name="user" id="user">
                     </div>
                     <div class="div-label-input">

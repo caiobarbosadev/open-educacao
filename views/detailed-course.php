@@ -18,34 +18,30 @@ include_once("../controllers/select_one_video.php");
 </head>
 
 <body>
-    <header>
-        <section class="inside-header">
-            <h2>Open UNIFEOB</h2>
-            <div class="inside-header-menu">
-                <a class="item-menu-space" href="javascript:history.back()">Cursos</a>
-                <a class="item-menu-space" href="#">Categorias</a>
-                <a class="item-menu-space" href="#">Enviar</a>
-                <a href="#">Reportar</a>
-            </div>
-            <div class="inside-header-profile-quit">
-                <a class="profile-button" href="#">
-                    <p><?php echo $_SESSION['primeironome']?></p>
-                    <img class="profile-image" src="../images/deschamps.jpg" alt="">
-                </a>
-                <a class="quit-button" href="../models/sair.php">Sair</a>
-            </div>
-        </section>
-    </header>
+    <?php
+
+    $acesso = $_SESSION["idcargo"];
+
+    if ($acesso == 1) {
+        include("../views/layouts/menuAdministrador.php");
+    } else if ($acesso == 2) {
+        include("../views/layouts/menuAprovador.php");
+    } else if ($acesso == 3) {
+        include("../views/layouts/menuAluno.php");
+    }
+
+    ?>
+
     <main class="course">
         <section class="inside-course">
             <div class="inside-course-left">
                 <?php
-                if($row == 1){
+                if ($row == 1) {
                     $Video_dados = mysqli_fetch_assoc($retorno);
-                    if($Video_dados["id"] == $_GET["id"]){
-                    echo('<img style=" object-fit: cover; " src="http://img.youtube.com/vi/'.$Video_dados["link"].'/maxresdefault.jpg" alt="">');
-                ?>   
-                <input class="registration-button" type="submit" value="Matricular">
+                    if ($Video_dados["id"] == $_GET["id"]) {
+                        echo ('<img style=" object-fit: cover; " src="http://img.youtube.com/vi/' . $Video_dados["link"] . '/maxresdefault.jpg" alt="">');
+                ?>
+                        <input class="registration-button" type="submit" value="Matricular">
             </div>
             <div class="inside-course-right">
                 <div class="inside-course-right-top">
@@ -57,16 +53,16 @@ include_once("../controllers/select_one_video.php");
                         </h2>
                         <p><strong>Detalhes</strong></p>
                         <p style="margin-bottom: 20px;">
-                            <?php 
-                                echo($Video_dados['conteudos']);
+                            <?php
+                            echo ($Video_dados['conteudos']);
                             ?>
                         </p>
                         <p><strong>O que você vai aprender?</strong></p>
                         <p style="margin-bottom: 20px;">
-                            <?php echo($Video_dados['detalhes']);
-                                }
-                             }
-                            ?>  
+                    <?php echo ($Video_dados['detalhes']);
+                    }
+                }
+                    ?>
                         </p>
                         <p><strong>Aulas:</strong> 3</p>
                         <p>Manipulando os arquivos HTML e CSS da página</p>
@@ -88,36 +84,7 @@ include_once("../controllers/select_one_video.php");
         </section>
     </main>
 
-    <footer>
-        <section class="inside-footer">
-            <div class="inside-footer-div1">
-                <h2>Estudante ensina <br> estudante.</h2>
-                <p>Open UNIFEOB</p>
-            </div>
-            <div class="inside-footer-div2">
-                <p>Menu</p>
-                <a href="">Cursos</a>
-                <a href="">Categorias</a>
-                <a href="">Reportar</a>
-                <a class="item-margin" href="">Página da web</a>
-            </div>
-            <div class="inside-footer-div3">
-                <p class="inside-footer-div3-p1">Redes Sociais</p>
-                <div class="footer-icons">
-                    <a href=""><img src="../images/instagram-icon.svg" alt=""></a>
-                    <a href=""><img src="../images/facebook-icon.svg" alt=""></a>
-                    <a href=""><img src="../images/whatsapp-icon.svg" alt=""></a>
-                </div>
-                <p class="inside-footer-div3-p2">Desenvolvido por</p>
-                <p class="inside-footer-div3-p3">Equipe 1 - ADS M4</p>
-            </div>
-            <div class="inside-footer-div4">
-                <p class="inside-footer-div4-p1">Entenda um pouco mais</p>
-                <p class="inside-footer-div4-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor.</p>
-                <img class="unifeob-logo" src="../images/unifeob-logo.png" alt="">
-            </div>
-        </section>
-    </footer>
+    <?php include("../views/layouts/footer.php") ?>
 </body>
 
 </html>
