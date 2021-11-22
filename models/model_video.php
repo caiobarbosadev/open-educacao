@@ -24,7 +24,7 @@
        }
 
     //Instrução SQL para inserir na tabela usuários
-    $queryUser = "INSERT INTO video(titulo, detalhes, conteudos, link, disponivel) VALUES ('$titulo', '$detalhes', '$conteudo', '$codigo[0]', 0)";
+    $queryUser = "INSERT INTO video(titulo, detalhes, conteudos, link, disponivel, likes) VALUES ('$titulo', '$detalhes', '$conteudo', '$codigo[0]', 0 , 0)";
 
 
     //Verificar se a query foi executada

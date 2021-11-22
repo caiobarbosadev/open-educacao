@@ -1,6 +1,15 @@
-<?php 
+<?php
+include_once("../models/connection.php");
 
 session_start();
+
+$idvideo = $_GET['id'];
+
+$queryBuscaVideo = "SELECT * FROM video WHERE id = '$idvideo'";
+
+$result = mysqli_query($conn, $queryBuscaVideo);
+
+$resultVideo = mysqli_fetch_assoc($result);
 
 ?>
 
@@ -16,7 +25,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/course.css" />
 
-    <title>Curso</title>
+    <title><?php echo ($resultVideo['titulo']); ?></title>
 </head>
 
 <body>
@@ -36,74 +45,26 @@ session_start();
 
     <main class="course">
         <section class="inside-course-title">
-            <h2>Animações com JS</h2>
-            <p>Felipe Deschamps</p>
+            <h2><?php echo ($resultVideo['titulo']); ?></h2>
         </section>
-        <div class="inside-course-video-buttons">
-            <a style="margin-right: 10px" class="video-button" href="#">Anterior</a>
-            <a class="video-button" href="#">Próximo</a>
-        </div>
 
         <section class="inside-course">
-            <div class="inside-course-left">
-
-                <div class="card-video-title">
-                    <div class="card-video-title-padding">
-                        <p style="margin-bottom: 5px; font-weight: 400;">
-                            Manipulando os arquivos HTML e CSS da página
-                        </p>
-                        <div class="card-video-flex">
-                            <p>14 min</p>
-                            <div class="detail-card">
-                                <img style="margin-right: 10px;" src="../images/correct-icon.svg" alt="" />
-                                <p>Concluído</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-video-title">
-                    <div class="card-video-title-padding">
-                        <p style="margin-bottom: 5px; font-weight: 400;">
-                            Manipulando os arquivos HTML e CSS da página
-                        </p>
-                        <div class="card-video-flex">
-                            <p>14 min</p>
-                            <div class="detail-card">
-                                <img style="margin-right: 10px;" src="../images/correct-icon.svg" alt="" />
-                                <p>Concluído</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-video-title">
-                    <div class="card-video-title-padding">
-                        <p style="margin-bottom: 5px; font-weight: 400;">
-                            Manipulando os arquivos HTML e CSS da página
-                        </p>
-                        <div class="card-video-flex">
-                            <p>14 min</p>
-                            <div class="detail-card">
-                                <img style="margin-right: 10px;" src="../images/correct-icon.svg" alt="" />
-                                <p>Concluído</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
             <div class="inside-course-right">
-                <iframe src="https://www.youtube.com/embed/pKTOT63X9XQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h2 style="margin-bottom: 20px;">Aplicando lógica de programação com JavaScript</h2>
-                <p style="font-weight: bold;">Progresso do curso: <span style="color: #00e394;">35%</span></p>
-                <img style="margin-bottom: 20px;" src="../images/progress.svg" alt="">
-                <p><strong>Conclusão do curso</strong></p>
-                <p style="margin-bottom: 20px;">Você poderá realizar a conclusão do curso e emitir o certificado após completar 100% do progresso.</p>
+                <iframe src="https://www.youtube.com/embed/<?php echo $resultVideo['link'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="info-video">
+                    <p><strong><?php echo ($resultVideo['titulo']); ?></strong></p>
+                    <p><?php echo ($resultVideo['detalhes']); ?></p>
+                    <p><?php echo ($resultVideo['conteudos']); ?></p>
+                </div>
+
+                <p>Assista o vídeo inteiro e retire o seu certificado de reconhecimento.</p>
+
                 <div class="div-button">
                     <input class="finish-button" type="submit" value="Concluir curso">
                 </div>
+
             </div>
+
         </section>
     </main>
 

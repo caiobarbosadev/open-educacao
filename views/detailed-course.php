@@ -31,7 +31,7 @@ include_once("../controllers/select_one_video.php");
     }
 
     ?>
-
+    
     <main class="course">
         <section class="inside-course">
             <div class="inside-course-left">
@@ -41,7 +41,9 @@ include_once("../controllers/select_one_video.php");
                     if ($Video_dados["id"] == $_GET["id"]) {
                         echo ('<img style=" object-fit: cover; " src="http://img.youtube.com/vi/' . $Video_dados["link"] . '/maxresdefault.jpg" alt="">');
                 ?>
-                        <input class="registration-button" type="submit" value="Matricular">
+                        <a href="../views/course.php?id=<?php echo $Video_dados['id']?>" class="registration-button">Assistir</a>
+                        <a href="../controllers/add_like.php?id=<?php echo $_GET["id"]; ?>"> <?php echo $Video_dados["likes"] ?> Like</a>
+                        <p id="demo"></p>
             </div>
             <div class="inside-course-right">
                 <div class="inside-course-right-top">
@@ -64,10 +66,6 @@ include_once("../controllers/select_one_video.php");
                 }
                     ?>
                         </p>
-                        <p><strong>Aulas:</strong> 3</p>
-                        <p>Manipulando os arquivos HTML e CSS da página</p>
-                        <p>Aplicando lógica de programação com JavaScript</p>
-                        <p>Animações com JavaScript na prática</p>
                     </div>
                 </div>
                 <a href="#">

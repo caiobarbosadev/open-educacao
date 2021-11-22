@@ -135,6 +135,9 @@ header {
     border-radius: 4px;
     background-color: #00E394;
     color: #fff;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
 }
 
 .inside-course-right {
