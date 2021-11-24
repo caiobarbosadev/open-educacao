@@ -17,8 +17,6 @@ $mostra_user = "SELECT * from usuario WHERE id = '{$id_usuario}'";
 
 }
 
-
-
 // consulta a tabela video onde o id do video for igual da url
 $mostra_video = "SELECT * from video WHERE id = '{$id_video}'";
 
@@ -46,11 +44,13 @@ $rows = mysqli_num_rows($consulta_likes);
 
 if($rows == 1){
     
-    
     echo "<script>
-            window.location.href='../views/detailed-course.php?id={$id_video}';
-            alert('Você já curtiu esse video!'); 
-          </script>";
+    
+        window.location.href='../views/detailed-course.php?id={$id_video}';
+        alert('voce já curtiu esse video!!');
+        
+            
+    </script>";
     // header('Location: ../views/detailed-course.php?id='.$id_video);
 
 }else{
@@ -74,11 +74,3 @@ if($rows == 1){
     header('Location: ../views/detailed-course.php?id='.$id_video);
 
 }
-
-
-
-
-
-
-
-?>

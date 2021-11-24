@@ -432,3 +432,42 @@ footer {
 .unifeob-logo {
     width: 100px;
 }
+
+
+/* paginação estilo */
+
+.pagination {
+    display: flex;
+    width: 200px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.page-link {
+    margin-left: -1px;
+    display: inline-block;
+    color: #0d6efd;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 0.4em 0.9rem;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: #0a58ca;
+    background-color: #e9ecef;
+    border-color: #dee2e6
+}
+
+.page-link:focus {
+    z-index: 3;
+    color: #0a58ca;
+    background-color: #e9ecef;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25)
+}

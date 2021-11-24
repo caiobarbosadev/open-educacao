@@ -131,14 +131,28 @@ header {
 .registration-button {
     height: 40px;
     border: 0;
-    cursor: pointer;
     border-radius: 4px;
     background-color: #00E394;
     color: #fff;
     text-align: center;
     line-height: 40px;
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+
+/* buton teste curtida */
+
+.registration-button a {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* buton teste curtida */
 
 .inside-course-right {
     width: 100%;
@@ -284,3 +298,26 @@ footer {
 .unifeob-logo {
     width: 100px;
 }
+
+
+/* like */
+
+
+/* .inside-course-left-like {
+    background: #00E394;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.inside-course-number {
+    color: #fff;
+    margin-left: 25px;
+    border-radius: 10px;
+    width: 20px;
+    font-size: 30px;
+    font-weight: 200;
+} */

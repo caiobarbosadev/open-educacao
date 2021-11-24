@@ -1,6 +1,7 @@
 <?php
 include('../models/checks_login.php');
 include_once("../controllers/select_one_video.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,7 +32,7 @@ include_once("../controllers/select_one_video.php");
     }
 
     ?>
-    
+
     <main class="course">
         <section class="inside-course">
             <div class="inside-course-left">
@@ -41,10 +42,22 @@ include_once("../controllers/select_one_video.php");
                     if ($Video_dados["id"] == $_GET["id"]) {
                         echo ('<img style=" object-fit: cover; " src="http://img.youtube.com/vi/' . $Video_dados["link"] . '/maxresdefault.jpg" alt="">');
                 ?>
-                        <a href="../views/course.php?id=<?php echo $Video_dados['id']?>" class="registration-button">Assistir</a>
-                        <a href="../controllers/add_like.php?id=<?php echo $_GET["id"]; ?>"> <?php echo $Video_dados["likes"] ?> Like</a>
-                        <p id="demo"></p>
-            </div>
+                        <span id="teste-like"></span>
+                    <div class="registration-button">
+                         
+                        <a href="../controllers/add_like.php?id=<?php echo $_GET["id"];  ?>"> 
+                                <img style=" margin-bottom: 0px; padding: 5px; width: 40px; height:auto;" src="../images/like-defined.svg" alt="">                            
+                        </a>
+                        <a href="../views/course.php?id=<?php echo $Video_dados['id'] ?>" >Assistir</a>
+                        <?php echo '<a >Curtidas: '.$Video_dados['likes'].'</a>'; ?>
+
+                    </div>
+                  
+
+                    
+                        
+                    </div>
+                    
             <div class="inside-course-right">
                 <div class="inside-course-right-top">
                     <div class="inside-course-right-top-content">
@@ -60,12 +73,17 @@ include_once("../controllers/select_one_video.php");
                             ?>
                         </p>
                         <p><strong>O que você vai aprender?</strong></p>
-                        <p style="margin-bottom: 20px;">
+                        <p style="margin-bottom: 25px;">
                     <?php echo ($Video_dados['detalhes']);
                     }
                 }
                     ?>
                         </p>
+
+                        <div class="inside-course-div-like">                            
+  
+                            
+                        </div>
                     </div>
                 </div>
                 <a href="#">
