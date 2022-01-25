@@ -43,21 +43,12 @@ include_once("../controllers/select_one_video.php");
                         echo ('<img style=" object-fit: cover; " src="http://img.youtube.com/vi/' . $Video_dados["link"] . '/maxresdefault.jpg" alt="">');
                 ?>
                         <span id="teste-like"></span>
-                    <div class="registration-button">
-                         
-                        <a href="../controllers/add_like.php?id=<?php echo $_GET["id"];  ?>"> 
-                                <img style=" margin-bottom: 0px; padding: 5px; width: 40px; height:auto;" src="../images/like-defined.svg" alt="">                            
-                        </a>
-                        <a href="../views/course.php?id=<?php echo $Video_dados['id'] ?>" >Assistir</a>
-                        <?php echo '<a >Curtidas: '.$Video_dados['likes'].'</a>'; ?>
+                        <div class="registration-button">
+                            <a href="../views/course.php?id=<?php echo $Video_dados['id'] ?>">Assistir</a>
 
-                    </div>
-                  
+                        </div>
+            </div>
 
-                    
-                        
-                    </div>
-                    
             <div class="inside-course-right">
                 <div class="inside-course-right-top">
                     <div class="inside-course-right-top-content">
@@ -80,9 +71,9 @@ include_once("../controllers/select_one_video.php");
                     ?>
                         </p>
 
-                        <div class="inside-course-div-like">                            
-  
-                            
+                        <div class="inside-course-div-like">
+
+
                         </div>
                     </div>
                 </div>
