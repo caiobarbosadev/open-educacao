@@ -151,7 +151,7 @@ label {
     .inside-main-left-div img {
         width: 300px;
     }
-    
+
     .inside-main-right {
         background: none;
     }
@@ -184,5 +184,12 @@ label {
     form {
         width: 80%;
         margin: 0 auto;
+        box-shadow: none;
+        justify-content: flex-start;
     }
+
+    .inside-main-left-div {
+        padding: 40px;
+    }
+
 }

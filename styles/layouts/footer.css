@@ -1,0 +1,135 @@
+footer {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+}
+
+.inside-footer {
+    width: 80%;
+    max-width: 1366px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    overflow-y: hidden;
+}
+
+.inside-footer-div1 {
+    width: 40%;
+}
+
+.inside-footer-div2,
+.inside-footer-div3,
+.inside-footer-div4 {
+    width: 20%;
+}
+
+.inside-footer-div1 h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.inside-footer-div1 p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.inside-footer-div2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.inside-footer-div2 p {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.inside-footer-div2 a {
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.item-margin {
+    margin-bottom: 0px !important;
+}
+
+.inside-footer-div3-p1 {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-icons {
+    display: flex;
+    width: 115px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.inside-footer-div3-p2 {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.inside-footer-div3-p3 {
+    color: #fff;
+}
+
+.inside-footer-div4-p1 {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.inside-footer-div4-p2 {
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.inside-footer-div4-p3 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.inside-footer-div1 h2 {
+    overflow-y: hidden;
+}
+
+.h4, h4 {
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    .inside-footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    footer h2 {
+        display: none;
+    }
+
+    .inside-footer-div2, .inside-footer-div3, .inside-footer-div4 {
+        width: 100%;
+    }
+
+    .footer-icons {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}

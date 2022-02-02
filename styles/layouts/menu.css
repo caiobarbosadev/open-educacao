@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+label {
+  font-weight: 300;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+.logo h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.logo:hover {
+  opacity: 1 !important;
+}
+
+/* CÓDIGOS DO MENU DESKTOP E MOBILE */
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-list a:hover {
+  opacity: 0.7;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+}
+
+nav {
+  width: 80%;
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  height: auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-left: 15px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.2s;
+}
+
+.hamburguer {
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  .nav-ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .nav-ul li {
+    margin-bottom: 20px;
+  }
+
+  .hamburguer {
+    display: block;
+  }
+}
+
+header {
+  width: 100vw;
+  height: auto;
+}
+
+nav {
+  padding: 20px 0px;
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hamburguer {
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hamburguer:focus {
+  outline: none;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inside-header img {
+  width: 150px;
+}
+
+nav a {
+  margin-right: 10px;
+  color: #fff;
+  transition: 200ms;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}

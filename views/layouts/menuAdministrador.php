@@ -1,22 +1,21 @@
-<?php 
+<?php
 
-    echo('
+echo ('
     <header>
-        <section class="inside-header">
-            <a href="../views/student-area.php"><h2>Open UNIFEOB</h2></a>
-            <div class="inside-header-menu">
-                <a class="item-menu-space" href="../views/student-area.php#available-courses">Cursos</a>
-                <a class="item-menu-space" href="../views/send-course.php">Enviar</a>
-                <a class="item-menu-space" href="#">Reportar</a>
-                <a class="item-menu-space" href="../views/approve.php">Aprovar</a>
-                <a href="#">Configurações</a>
-            </div>
-            <div class="inside-header-profile-quit">
-                <a class="profile-button" href="#">Meu Perfil</a>
-                <a class="quit-button" href="../models/sair.php">Sair</a>
-            </div>
-        </section>
+      <nav>
+        <a class="logo" href="../views/student-area.php"><h2>Open Educação</h2></a>
+        <button class="hamburguer" id="hamburguer">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+          <li><a href="../views/student-area.php">Home</a></li>
+          <li><a href="../views/student-area.php#available-courses">Cursos</a></li>
+          <li><a href="../views/send-course.php">Enviar</a></li>
+          <li><a href="#">Reportar</a></li>
+          <li><a href="../views/approve.php">Aprovar</a></li>
+          <li><a href="#">Configurações</a></li>
+          <li style="margin-bottom: 0px;"><a class="quit-button" href="../models/sair.php">Sair</a></li>
+        </ul>
+      </nav>
     </header>
     ');
-
-?>

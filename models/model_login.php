@@ -1,10 +1,10 @@
-<?php 
+<?php
 session_start();
 
 include('connection.php');
 
 
-if(empty($_POST['user']) || empty($_POST['password'])){
+if (empty($_POST['user']) || empty($_POST['password'])) {
     echo 'informe o login e senha!';
     header('Location: ../views/login.php');
     exit();
@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_num_rows($result);
 
 print_r($row);
-if($row == 1) {
+if ($row == 1) {
     $Pnome_bd = mysqli_fetch_assoc($result);
     $_SESSION['id'] = $Pnome_bd['id'];
     $_SESSION['primeironome'] = $Pnome_bd['primeironome'];
@@ -34,10 +34,8 @@ if($row == 1) {
 
     header('Location: ../views/student-area.php');
     exit();
-} 
-else {
+} else {
     $_SESSION['nao_autenticado'] = true;
     header('Location: ../views/login.php');
     exit();
 }
-?>

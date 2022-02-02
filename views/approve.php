@@ -33,9 +33,14 @@ mysqli_close($conn);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/approve.css" />
-    <title>Open UNIFEOB: Aprovar Conteúdos</title>
+    <link rel="stylesheet" href="../styles/layouts/menu.css">
+    <link rel="stylesheet" href="../styles/layouts/footer.css">
+    <title>Open Educação: Aprovar Conteúdos</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -56,7 +61,7 @@ mysqli_close($conn);
     <div class="container">
         <h4>Aprovação de Conteúdos</h4>
 
-        <table class="table">
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -64,6 +69,7 @@ mysqli_close($conn);
                     <th scope="col">Detalhes</th>
                     <th scope="col">Conteúdo</th>
                     <th scope="col">Aprovar</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -83,11 +89,11 @@ mysqli_close($conn);
                         </td>
                         <td>
                             <button data-id='<?php echo $rows_relatos['id']; ?>' type="button" class="userinfo btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Sim</button>
-
-                            <button data-id='<?php echo $rows_relatos['id']; ?>' type="button" class="userinfo btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Não
+                        </td>
+                        <td>
+                            <button data-id='<?php echo $rows_relatos['id']; ?>' type="button" class="userinfo btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                X
                             </button>
-
                         </td>
                     </tr>
                 <?php } ?>
@@ -113,8 +119,6 @@ mysqli_close($conn);
 
     <?php include("../views/layouts/footer.php") ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
     <script type='text/javascript'>
         $(document).ready(function() {
@@ -132,6 +136,16 @@ mysqli_close($conn);
                     }
                 });
             });
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/11e70aec3a.js" crossorigin="anonymous"></script>
+    <script>
+        const hamburguer = document.getElementById('hamburguer');
+        const navUL = document.getElementById('nav-ul');
+
+        hamburguer.addEventListener('click', () => {
+            navUL.classList.toggle('show')
         });
     </script>
 </body>

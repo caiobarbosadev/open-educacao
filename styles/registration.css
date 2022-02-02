@@ -104,10 +104,10 @@ form input[type="text"], input[type="password"], input[type="email"], input[type
     margin-right: 10px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .div-label-input {
@@ -148,7 +148,7 @@ input[type=number]::-webkit-outer-spin-button {
     .inside-main-left-div img {
         width: 300px;
     }
-    
+
     .inside-main-right {
         height: auto;
         background: none;
@@ -165,7 +165,7 @@ input[type=number]::-webkit-outer-spin-button {
     .inside-main-right-div {
         width: 90%;
     }
-    
+
     form {
         height: auto;
         width: 100%;
@@ -192,7 +192,7 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
     }
 
-    .div-label-input-responsive{
+    .div-label-input-responsive {
         display: flex;
         flex-direction: column;
     }
@@ -208,4 +208,23 @@ input[type=number]::-webkit-outer-spin-button {
         margin-bottom: 0;
     }
 
+}
+
+@media screen and (max-width: 320px) {
+    .inside-main-left {
+        width: 100%;
+    }
+
+    .inside-main-left-div {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .inside-main-left-div img {
+        width: 100%;
+    }
+
+    .form-texts {
+        width: 100%;
+    }
 }
