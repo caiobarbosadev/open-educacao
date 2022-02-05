@@ -59,11 +59,11 @@ $resultVideo = mysqli_fetch_assoc($result);
                     <p><?php echo ($resultVideo['conteudos']); ?></p>
                 </div>
 
-                <p>Assista o vídeo inteiro e retire o seu certificado de reconhecimento.</p>
+                <!-- <p>Assista o vídeo inteiro e retire o seu certificado de reconhecimento.</p>
 
                 <div class="div-button">
                     <input class="finish-button" type="submit" value="Concluir curso">
-                </div>
+                </div> -->
 
             </div>
 

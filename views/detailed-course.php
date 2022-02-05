@@ -67,16 +67,6 @@ include_once("../controllers/select_one_video.php");
                     ?>
                         </p>
 
-                        <a href="#">
-                            <div class="inside-course-right-bottom">
-                                <img src="../images/deschamps.jpg" alt="">
-                                <div>
-                                    <p><strong>Felipe Deschamps</strong></p>
-                                    <p>Ciência da Computação</p>
-                                    <p>Módulo 4</p>
-                                </div>
-                            </div>
-                        </a>
                     </div>
 
 

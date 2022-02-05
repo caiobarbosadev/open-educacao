@@ -18,7 +18,7 @@ echo ('<footer>
             </div>
             <div class="inside-footer-div4">
                 <p class="inside-footer-div4-p1">Entenda um pouco mais</p>
-                <p class="inside-footer-div4-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor.</p>
+                <p class="inside-footer-div4-p2">Na metodologia ativa, o aluno é personagem principal e o maior responsável pelo processo de aprendizado. O objetivo desse modelo de ensino é incentivar que a comunidade acadêmica desenvolva a capacidade de absorção de conteúdos de maneira autônoma e participativa.</p>
             </div>
         </section>
     </footer>
