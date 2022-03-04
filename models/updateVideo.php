@@ -2,14 +2,18 @@
 
 include_once("connection.php");
 
-//Receber informação do input
+// Receber informação do input
 $id = mysqli_real_escape_string($conn, $_POST["videoId"]);
-$confirmar = mysqli_real_escape_string($conn, $_POST["confirmar"]);
+$status = $_POST["status"];
 
-//Estruturar a query que será executada
+if ($status == "approved") {
+    $updateQuery = " UPDATE video SET disponivel = 1 WHERE id = '$id' ";
+} else if ($status == "reproved") {
+    
+    // será necessário criar uma nova coluna no banco para vídeos recusados
+}
 
-$updateQuery = " UPDATE video SET disponivel = 1 WHERE id = '$id' ";
-
+// Estruturar a query que será executada
 if (!mysqli_query($conn, $updateQuery)) {
     echo "Deu ruim!";
 } else {

@@ -1,10 +1,10 @@
 <?php
 
 //Informações para se conectar ao banco de dados
-$server = "openeducacao.mysql.dbaas.com.br";
-$user = "openeducacao";
-$password = "Acessodbopen@1";
-$dbname = "openeducacao";
+$server = "";
+$user = "";
+$password = "";
+$dbname = "";
 
 //Conexão com o banco de dados
 $conn = mysqli_connect($server, $user, $password, $dbname);

@@ -88,10 +88,10 @@ mysqli_close($conn);
                             <?php echo $rows_relatos['conteudos']; ?>
                         </td>
                         <td>
-                            <button data-id='<?php echo $rows_relatos['id']; ?>' type="button" class="userinfo btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Sim</button>
+                            <button data-id='<?php echo $rows_relatos['id']; ?>' type="button" class="userinfo btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#approve">Sim</button>
                         </td>
                         <td>
-                            <button data-id='<?php echo $rows_relatos['id']; ?>' type="button" class="userinfo btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button data-id='<?php echo $rows_relatos['id']; ?>' type="button" class="userinfo btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#reprove">
                                 X
                             </button>
                         </td>
@@ -102,7 +102,7 @@ mysqli_close($conn);
         </table>
     </div>
 
-    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="approve" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -117,22 +117,37 @@ mysqli_close($conn);
         </div>
     </div>
 
-    <?php include("../views/layouts/footer.php") ?>
+    <div class="modal fade" id="reprove" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Reprovação de conteúdo <span style="color: #dc3545;"><i class="far fa-times-circle"></i></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- O CONTEÚDO QUE ESTÁ AQUI É INSERIDO VIA AJAX PELO ARQUIVO AJAXFILE.PHP -->
+                </div>
 
+            </div>
+        </div>
+    </div>
+
+    <?php include("../views/layouts/footer.php") ?>
 
     <script type='text/javascript'>
         $(document).ready(function() {
             $('.userinfo').click(function() {
                 var videoId = $(this).data('id');
+                let revisionChoice = $(this).data('bsTarget');
                 $.ajax({
                     url: '../models/ajaxfile.php' + location.search,
                     type: 'POST',
                     data: {
-                        videoId: videoId
+                        videoId: videoId,
+                        revisionChoice: revisionChoice
                     },
                     success: function(response) {
                         $('.modal-body').html(response);
-                        $('#exampleModal').modal('show');
                     }
                 });
             });
