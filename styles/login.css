@@ -61,7 +61,7 @@ main {
 }
 
 form {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     width: 400px;
     height: 480px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -145,6 +145,14 @@ form input[type="text"], input[type="password"] {
 
 label {
     font-size: 14px;
+}
+
+.invalid-credentials {
+    font-size: 32px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ff4343 0%, #ff5757 47%, #ff5d5d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 1000px) {

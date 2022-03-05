@@ -45,16 +45,19 @@ session_start();
                     <div class="form-links">
                         <a href="registration.php">Cadastrar-se</a>
                     </div>
-                    <!-- <?php
+                    <?php
                             echo "<br>";
-                            // verifica se existe variavel global 'msg' 
                             if (isset($_SESSION['nao_autenticado'])) {
-                                // se existir imprime a mensagem
-                                echo $_SESSION['nao_autenticado'];
+                            ?>
+                                <div class="invalid-credentials">
+                                    <p>Usuário e/ou senha inválido(s)</p>
+                                </div>
+                            <?php
+                                
                                 // depois de imprimir destroi a mensagem
                                 unset($_SESSION['nao_autenticado']);
                             }
-                            ?> -->
+                            ?>
             </div>
             </form>
             </div>

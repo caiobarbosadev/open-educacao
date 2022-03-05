@@ -9,7 +9,6 @@ $status = $_POST["status"];
 if ($status == "approved") {
     $updateQuery = " UPDATE video SET disponivel = 1 WHERE id = '$id' ";
 } else if ($status == "reproved") {
-    
     // será necessário criar uma nova coluna no banco para vídeos recusados
 }
 
